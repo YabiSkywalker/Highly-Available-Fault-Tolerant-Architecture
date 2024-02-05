@@ -8,3 +8,14 @@ The files are broken down as follows:
     2. main.tf are where the resources themselves are provisioned. Ex: All of the "resource" tags equate to a cloud resource, which is then followed by the kind of resource. 
     3. provider.tf is where you will find that I am pointing to the "us-east-2" region as it is the closest region to me. Since this is for demonstration purposes, I designed my architecture in a single region with a multi-az configuration. 
     4. variables.tf is where you will find my commonly used tags. I constantly reuse these as a provision resources within the main.tf script. 
+
+
+
+The Jenkins job this triggers will deploy all the changes in the following stages: 
+
+    1. Install TF
+    2. Checkout code from Main branch. 
+    3. Terraform initalize 
+    4. Terraform plan 
+    5. Terraform apply 
+    6. Terraform destroy (So we do not add unwanted costs.) 
