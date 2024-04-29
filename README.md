@@ -11,11 +11,13 @@ The files are broken down as follows:
 
 
 
-The Jenkins job this triggers will deploy all the changes in the following stages: 
+For Continuous Integration, and Continuous Deployment install Jenkins on your local machine and attach the same IAM role to the Jenkins agent. 
 
-    1. Install TF
-    2. Checkout code from Main branch. 
-    3. Terraform initalize 
-    4. Terraform plan 
-    5. Terraform apply 
-    6. Terraform destroy (So we do not add unwanted costs.) 
+    The Jenkins job this triggers will deploy all the changes in the following stages: 
+
+        1. Terraform initalize 
+        2. Terraform plan 
+        3. Terraform apply 
+        4. Terraform destroy (So we do not add unwanted costs.) 
+
+
